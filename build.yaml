@@ -17,5 +17,3 @@ include:
     shield: split_left
   - board: seeeduino_xiao_ble
     shield: split_right
-  - board: seeeduino_xiao_ble
-    shield: settings_reset

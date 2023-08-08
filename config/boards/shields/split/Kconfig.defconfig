@@ -1,12 +1,7 @@
 if SHIELD_SPLIT_LEFT
 
 config ZMK_KEYBOARD_NAME
-	default "Split"
-
-config ZMK_BLE
-  default y
-config ZMK_USB
-  default n
+	default "split"
 
 config ZMK_SPLIT_BLE_ROLE_CENTRAL
 	default y
@@ -24,5 +19,5 @@ if SHIELD_SPLIT_LEFT || SHIELD_SPLIT_RIGHT
 
 config ZMK_SPLIT
 	default y
- 
+
 endif
