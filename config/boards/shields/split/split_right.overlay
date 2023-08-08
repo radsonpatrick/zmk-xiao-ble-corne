@@ -4,7 +4,7 @@
  * SPDX-License-Identifier: MIT
  */
 
-#include "chipper.dtsi"
+#include "split.dtsi"
 
 &five_column_transform {
 	col-offset = <5>;
