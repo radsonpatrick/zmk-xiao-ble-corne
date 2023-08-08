@@ -6,10 +6,6 @@
 
 #include "split.dtsi"
 
-&five_column_transform {
-	col-offset = <5>;
-};
-
 &default_transform {
 	col-offset = <5>;
 };
