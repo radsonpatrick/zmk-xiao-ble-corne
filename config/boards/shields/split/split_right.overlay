@@ -7,21 +7,16 @@
 #include "split.dtsi"
 
 &five_column_transform {
-	col-offset = <6>;
-};
-
-&default_transform {
-	col-offset = <6>;
+	col-offset = <5>;
 };
 
 
 &kscan0 {
 	col-gpios
-		= <&gpio1 11 GPIO_ACTIVE_HIGH>	//Col0
-		, <&gpio1 12 GPIO_ACTIVE_HIGH>  //Col1
-		, <&gpio1 13 GPIO_ACTIVE_HIGH>  //Col2
-		, <&gpio1 14 GPIO_ACTIVE_HIGH>  //Col3
-		, <&gpio1 15 GPIO_ACTIVE_HIGH>  //Col4
-		, <&gpio0 10 GPIO_ACTIVE_HIGH>  //Col5
+		= <&gpio1 4 GPIO_ACTIVE_HIGH>  //Col1
+		, <&gpio1 3 GPIO_ACTIVE_HIGH>  //Col2
+		, <&gpio1 2 GPIO_ACTIVE_HIGH>  //Col3
+		, <&gpio1 1 GPIO_ACTIVE_HIGH>  //Col4
+		, <&gpio0 0 GPIO_ACTIVE_HIGH>  //Col5
 		;
 };
