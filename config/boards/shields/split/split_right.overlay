@@ -1,0 +1,27 @@
+/*
+ * Copyright (c) 2020 Pete Johanson
+ *
+ * SPDX-License-Identifier: MIT
+ */
+
+#include "chipper.dtsi"
+
+&five_column_transform {
+	col-offset = <5>;
+};
+
+&default_transform {
+	col-offset = <5>;
+};
+
+
+&kscan0 {
+	col-gpios
+		= <&gpio1 9 GPIO_ACTIVE_HIGH>	//Col0
+		, <&gpio1 8 GPIO_ACTIVE_HIGH>  //Col1
+		, <&gpio1 7 GPIO_ACTIVE_HIGH>  //Col2
+		, <&gpio1 6 GPIO_ACTIVE_HIGH>  //Col3
+		, <&gpio1 5 GPIO_ACTIVE_HIGH>  //Col4
+
+		;
+};
