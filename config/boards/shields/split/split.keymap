@@ -93,8 +93,8 @@
                 };
         RAISE {
            bindings = <
-   &kp N1 &kp N2 &kp N3 &kp N4 &kp N5   &kp N6 &kp N7  &kp N8     &kp N9   &kp N0
-   &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &kp F &bootloader   &kp H &kp HOME  &kp UP &kp END   &kp PG_UP
+   &kp N1  &kp N2  &kp N3  &kp N4  &kp N5   &kp N6 &kp N7  &kp N8     &kp N9   &kp N0
+   &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &kp F    &bootloader  &kp HOME  &kp UP &kp END   &kp PG_UP
    &none &none &bootloader &sys_reset &bt BT_CLR   &sys_reset &kp LEFT  &kp DOWN &kp RIGHT &kp PG_DN
         &kp LGUI &mt SPACE LCTRL &kp LGUI    &kp RET  &mt BSPC LSHIFT   &kp X
                         >;
