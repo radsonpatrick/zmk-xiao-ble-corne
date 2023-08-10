@@ -57,10 +57,35 @@
             key-positions = <22 23>;
             bindings = <&kp LC(C)>;
         };
+        combo_paste {
+            timeout-ms = <50>;
+            key-positions = <23 24>;
+            bindings = <&kp LC(V)>;
+        };
+        combo_cut {
+            timeout-ms = <50>;
+            key-positions = <21 22>;
+            bindings = <&kp LC(X)>;
+        };
+        combo_undo {
+            timeout-ms = <50>;
+            key-positions = <20 21>;
+            bindings = <&kp LC(Z)>;
+        };
+        combo_next {
+            timeout-ms = <50>;
+            key-positions = <20 21 22>;
+            bindings = <&kp LC(Y)>;
+        };
+        combo_bootloader {
+            timeout-ms = <50>;
+            key-positions = <0 2 4>;
+            bindings = <&bootloader>;
+        };
         combo_restart {
             timeout-ms = <50>;
-            key-positions = <0 1 2 3>;
-            bindings = <&bootloader>;
+            key-positions = <10 12 14>;
+            bindings = <&sys_reset>;
         };
     };
 };
