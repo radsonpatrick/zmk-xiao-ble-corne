@@ -57,6 +57,11 @@
             key-positions = <22 23>;
             bindings = <&kp LC(C)>;
         };
+        combo_restart {
+            timeout-ms = <50>;
+            key-positions = <0 1 2 3>;
+            bindings = <&bootloader>;
+        };
     };
 };
 / {
