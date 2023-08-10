@@ -77,26 +77,6 @@
             key-positions = <20 21 22>;
             bindings = <&kp LC(Y)>;
         };
-        combo_bootloader {
-            timeout-ms = <50>;
-            key-positions = <0 2 4>;
-            bindings = <&bootloader>;
-        };
-        combo_restart {
-            timeout-ms = <50>;
-            key-positions = <10 12 14>;
-            bindings = <&sys_reset>;
-        };
-        combo_bootloader_r {
-            timeout-ms = <50>;
-            key-positions = <5 7 9>;
-            bindings = <&bootloader>;
-        };
-        combo_restart_r {
-            timeout-ms = <50>;
-            key-positions = <15 17 19>;
-            bindings = <&sys_reset>;
-        };
     };
 };
 / {
@@ -114,8 +94,8 @@
         RAISE {
            bindings = <
    &kp N1 &kp N2 &kp N3 &kp N4 &kp N5   &kp N6 &kp N7  &kp N8     &kp N9   &kp N0
-   &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &kp F &kp G   &kp H &kp HOME  &kp UP &kp END   &kp PG_UP
-   &kp Z &kp X &kp C &kp V &bt BT_CLR   &kp N &kp LEFT  &kp DOWN &kp RIGHT &kp PG_DN
+   &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &kp F &bootloader   &kp H &kp HOME  &kp UP &kp END   &kp PG_UP
+   &none &none &bootloader &sys_reset &bt BT_CLR   &sys_reset &kp LEFT  &kp DOWN &kp RIGHT &kp PG_DN
         &kp LGUI &mt SPACE LCTRL &kp LGUI    &kp RET  &mt BSPC LSHIFT   &kp X
                         >;
                 };
