@@ -12,8 +12,10 @@
 #define COMBO_TIMEOUT 60
 
 #define DEFAULT 0
+#define RAISE 1
 
 
+&mt {tapping-term-ms = <400>;};
 
 
 &kscan0 {
@@ -21,22 +23,24 @@
 	};
 
 / {
-        keymap {
-                compatible = "zmk,keymap";
+   keymap {
+        compatible = "zmk,keymap";
 
-                default_layer {
-// -----------------------------------------------------------------------------------------
-// |  &bt BT_CLR  | &bt BT_CLR  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | 
-// |  &bt BT_CLR  |  &bt BT_CLR  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |
-// |  &bt BT_CLR  |  &bt BT_CLR  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | 
-//             | GUI | LWR | ENT |   | SPC | RSE  | ALT |
-                        bindings = <
+        default_layer {
+           bindings = <
    &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &kp P
    &kp A &kp S &kp D &kp F &kp G   &kp H &kp J  &kp K &kp L   &kp SQT
    &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH
-        &kp LGUI &kp S &kp RET   &kp SPACE &kp A &kp X
+        &mo RAISE &mt SPACE LCTRL &kp LGUI    &kp RET  &mt BSPC LSHIFT   &mo RAISE
                         >;
-		label = "BASE";
+                };
+        RAISE {
+           bindings = <
+   &kp N1 &kp N2 &kp N3 &kp N4 &kp N5   &kp N6 &kp N7  &kp N8     &kp N9   &kp N0
+   &kp A &kp S &kp D &kp F &kp G   &kp H &kp HOME  &kp UP &kp END   &kp PG_UP
+   &kp Z &kp X &kp C &kp V &kp B   &kp N &kp LEFT  &kp DOWN &kp RIGHT &kp PG_DN
+        &kp LGUI &mt SPACE LCTRL &kp LGUI    &kp RET  &mt BSPC LSHIFT   &kp X
+                        >;
                 };
                
         };
