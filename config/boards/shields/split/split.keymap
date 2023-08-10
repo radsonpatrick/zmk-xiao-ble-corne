@@ -36,43 +36,12 @@
 //             | GUI | LWR | ENT |   | SPC | RSE  | ALT |
                         bindings = <
    &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &kp P
-   &bh 3 A &kp S &kp D &kp F &kp G   &kp H &kp J  &kp K &kp L   &kp SQT
-   &mt LSHFT Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &mt RSHFT FSLH
-        &kp LGUI &bh 1 HOME &mt LCTRL RET   &kp SPACE &bh 2 END &mt RALT LG(V)
+   &kp A &kp S &kp D &kp F &kp G   &kp H &kp J  &kp K &kp L   &kp SQT
+   &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH
+        &kp LGUI &kp S &kp RET   &kp SPACE &kp A &kp X
                         >;
 		label = "BASE";
                 };
-                lower_layer {
-
-                        bindings = <
-   &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_CLR     &kp PG_UP &kp N7 &kp N8 &kp N9 &kp BSPC
-   &kp F2       &hm LCTRL F3  &hm LSHFT F4  &hm LALT F5  &hm LGUI F6         &kp PG_DN &kp N4 &kp N5 &kp N6 &kp BSLH
-   &kp F7       &kp F8       &kp F10      &kp F11      &kp F12        &kp INS &kp N1 &kp N2 &kp N3  &kp LC(RET)
-               	        &kp LC(LA(LSHFT)) &trans       &mt RALT RET      &mt LCTRL F1  &kp N0  &mt LSHFT DOT
-                        >;
-		label = "Numbers";
-                };
-
-                raise_layer {
-
-                        bindings = <
-   &kp EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT             &kp CARET &kp AMPS  &kp KP_MULTIPLY &kp LPAR &kp RPAR 
-   &kp TAB   &kp CAPS &kp F13   &out OUT_TOG &kp LGUI      &kp MINUS &kp EQUAL &kp LBRC &kp RBRC &kp PIPE 
-   &kp ESC   &kp GRAVE &kp QMARK   &kp F9   &kp F17             &kp UNDER &kp PLUS  &kp LBKT &kp RBKT &kp BSLH 
-        	     &kp LCTRL &kp LALT   &mt LSHFT LS(INS)   &kp RET   &trans    &mt RALT TILDE
-                        >;
-		label = "Symbols";
-		};
-		
-		danger_layer {
-
-                        bindings = <
-   &bootloader  &kp AT &kp HASH &kp PAUSE_BREAK &kp SLCK              &kp C_VOL_UP &hm LC(V) LC(C)  &hello &kp LC(LA(DEL)) &bootloader 
-   &trans   &trans &kp LC(LSHFT)  &mt LSHFT UP   &mt LCTRL PSCRN   &kp C_VOL_DN &trans &trans        &kp UP &kp SEMI 
-   &kp LNLCK   &trans &kp LEFT &kp DOWN &kp RIGHT              &kp C_MUTE &trans  &kp LEFT        &kp DOWN &kp RIGHT 
-        	     &kp LG(Z) &kp LG(X)   &kp LG(C)   &kp LC(LA(W))   &kp LC(LA(P))    &kp LC(LA(R))
-                        >;
-                label = "**DANGER**";
-		};
+               
         };
 };
