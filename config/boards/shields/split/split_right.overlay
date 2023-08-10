@@ -14,9 +14,9 @@
 &kscan0 {
 	col-gpios
 		= <&gpio1 4 GPIO_ACTIVE_HIGH>  //Col1
-		, <&gpio1 3 GPIO_ACTIVE_HIGH>  //Col2
-		, <&gpio1 2 GPIO_ACTIVE_HIGH>  //Col3
-		, <&gpio1 1 GPIO_ACTIVE_HIGH>  //Col4
-		, <&gpio0 0 GPIO_ACTIVE_HIGH>  //Col5
+		, <&gpio1 5 GPIO_ACTIVE_HIGH>  //Col2
+		, <&gpio1 6 GPIO_ACTIVE_HIGH>  //Col3
+		, <&gpio1 7 GPIO_ACTIVE_HIGH>  //Col4
+		, <&gpio0 8 GPIO_ACTIVE_HIGH>  //Col5
 		;
 };
