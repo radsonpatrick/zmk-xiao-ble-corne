@@ -1,3 +1,4 @@
+
 if SHIELD_SPLIT_LEFT
 
 config ZMK_KEYBOARD_NAME
