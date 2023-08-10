@@ -13,6 +13,8 @@
 
 #define DEFAULT 0
 #define RAISE 1
+#define LOWER 2
+
 
 
 &mt {tapping-term-ms = <400>;};
@@ -23,15 +25,30 @@
 	};
 
 / {
+    combos {
+        compatible = "zmk,combos";
+        combo_esc {
+            timeout-ms = <50>;
+            key-positions = <0 1>;
+            bindings = <&kp ESC>;
+        };
+        combo_tab {
+            timeout-ms = <50>;
+            key-positions = <10 11>;
+            bindings = <&kp TAB>;
+        };
+    };
+};
+/ {
    keymap {
         compatible = "zmk,keymap";
 
         default_layer {
            bindings = <
    &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &kp P
-   &kp A &kp S &kp D &kp F &kp G   &kp H &kp J  &kp K &kp L   &kp SQT
+   &kp A &kp S &kp D &kp F &kp G   &kp H &kp J  &kp K &kp L   &kp SEMI
    &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH
-        &mo RAISE &mt SPACE LCTRL &kp LGUI    &kp RET  &mt BSPC LSHIFT   &mo RAISE
+        &mo LOWER &mt  LCTRL SPACE &kp LGUI    &kp RET  &mt  LSHIFT  BSPC  &mo RAISE
                         >;
                 };
         RAISE {
@@ -40,6 +57,14 @@
    &kp A &kp S &kp D &kp F &kp G   &kp H &kp HOME  &kp UP &kp END   &kp PG_UP
    &kp Z &kp X &kp C &kp V &kp B   &kp N &kp LEFT  &kp DOWN &kp RIGHT &kp PG_DN
         &kp LGUI &mt SPACE LCTRL &kp LGUI    &kp RET  &mt BSPC LSHIFT   &kp X
+                        >;
+                };
+        LOWER {
+           bindings = <
+   &kp EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT   &kp CARET &kp AMPS  &kp ASTRK     &kp LPAR   &kp RPAR
+   &kp F1 &kp F2 &kp F3 &kp F4 &kp F5            &kp MINUS &kp EQUAL  &kp LBRC &kp RBRC   &kp BSLH
+   &kp F6 &kp F7 &kp F8 &kp F9 &kp F10           &kp UNDER &kp PLUS  &kp LBKT &kp RBKT &kp PIPE
+        &kp LGUI &mt SPACE LCTRL &kp LGUI        &kp RET  &mt BSPC LSHIFT   &kp X
                         >;
                 };
                
