@@ -9,12 +9,12 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/outputs.h>
 
-#define COMBO_TIMEOUT 60
+#define COMBO_TIMEOUT 30
 
 #define DEFAULT 0
 #define RAISE 1
 #define LOWER 2
-
+#define ADVANCED
 
 
 &mt {tapping-term-ms = <400>;};
@@ -27,55 +27,70 @@
 / {
     combos {
         compatible = "zmk,combos";
+        combo_del {
+            timeout-ms = <30>;
+            key-positions = <28 29>;
+            bindings = <&kp LS(SLASH)>;
+        };
+        combo_del {
+            timeout-ms = <30>;
+            key-positions = <8 9>;
+            bindings = <&kp DEL>;
+        };
         combo_esc {
-            timeout-ms = <50>;
+            timeout-ms = <30>;
             key-positions = <0 1>;
             bindings = <&kp ESC>;
         };
         combo_tab {
-            timeout-ms = <50>;
+            timeout-ms = <30>;
             key-positions = <10 11>;
             bindings = <&kp TAB>;
         };
         combo_capslock {
-            timeout-ms = <50>;
+            timeout-ms = <30>;
             key-positions = <10 20>;
             bindings = <&kp CAPS>;
         };
         combo_sqt {
-            timeout-ms = <50>;
+            timeout-ms = <30>;
             key-positions = <18 19>;
             bindings = <&kp SQT>;
         };
         combo_tilde {
-            timeout-ms = <50>;
+            timeout-ms = <30>;
             key-positions = <17 18>;
             bindings = <&kp TILDE>;
         };
         combo_copy {
-            timeout-ms = <50>;
+            timeout-ms = <30>;
             key-positions = <22 23>;
             bindings = <&kp LC(C)>;
         };
         combo_paste {
-            timeout-ms = <50>;
+            timeout-ms = <30>;
             key-positions = <23 24>;
             bindings = <&kp LC(V)>;
         };
         combo_cut {
-            timeout-ms = <50>;
+            timeout-ms = <30>;
             key-positions = <21 22>;
             bindings = <&kp LC(X)>;
         };
         combo_undo {
-            timeout-ms = <50>;
+            timeout-ms = <30>;
             key-positions = <20 21>;
             bindings = <&kp LC(Z)>;
         };
         combo_next {
-            timeout-ms = <50>;
+            timeout-ms = <30>;
             key-positions = <20 21 22>;
             bindings = <&kp LC(Y)>;
+        };
+        combo_next {
+            timeout-ms = <30>;
+            key-positions = <32 37>;
+            bindings = <&mo ADVANCED>;
         };
     };
 };
@@ -93,10 +108,10 @@
                 };
         RAISE {
            bindings = <
-   &kp N1  &kp N2  &kp N3  &kp N4  &kp N5                           &kp N6 &kp N7  &kp N8     &kp N9   &kp N0
-   &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &none &none         &bootloader &kp HOME  &kp UP &kp END   &kp PG_UP
-   &none &none &bootloader &sys_reset &bt BT_CLR                    &sys_reset &kp LEFT  &kp DOWN &kp RIGHT &kp PG_DN
-               &kp LGUI    &mt SPACE LCTRL &kp LGUI                 &kp RET  &mt BSPC LSHIFT   &kp X
+   &kp N1  &kp N2  &kp N3  &kp N4  &kp N5            &kp N6 &kp N7  &kp N8     &kp N9   &kp N0
+   &none  &none &none &none &none                    &none &kp HOME  &kp UP &kp END   &kp PG_UP
+   &none &none &none  &none &none                    &none &kp LEFT  &kp DOWN &kp RIGHT &kp PG_DN
+        &kp LGUI  &mt SPACE LCTRL &kp LGUI                 &kp RET  &mt BSPC LSHIFT   &kp X
                         >;
                 };
         LOWER {
@@ -105,6 +120,14 @@
    &kp F1 &kp F2 &kp F3 &kp F4 &kp F5            &kp MINUS &kp EQUAL  &kp LBRC &kp RBRC   &kp BSLH
    &kp F6 &kp F7 &kp F8 &kp F9 &kp F10           &kp UNDER &kp PLUS  &kp LBKT &kp RBKT &kp PIPE
         &kp LGUI &mt SPACE LCTRL &kp LGUI        &kp RET  &mt BSPC LSHIFT   &kp X
+                        >;
+                };
+        ADVANCED {
+           bindings = <
+   &bt BT_CLR  &none  &none  &none  &none                           &none &none  &none    &none  &none
+   &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 BT_SEL 4 BT_SEL 5        &bootloader &none  &none &none   &none
+   &none &none  &none &bootloader &sys_reset                   &sys_reset &bootloader  &none &none &none
+               &kp LGUI    &mt SPACE LCTRL &kp LGUI                 &kp RET  &mt BSPC LSHIFT   &kp X
                         >;
                 };
                
