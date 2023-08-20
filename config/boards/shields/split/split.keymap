@@ -21,6 +21,13 @@
 
 &mt {tapping-term-ms = <400>;};
 
+&mmv {
+    time-to-max-speed-ms = <50>;
+};
+
+&mwh {
+    acceleration-exponent=<1>;
+};
 
 &kscan0 {
 	debounce-period = <10>;
@@ -106,7 +113,7 @@
         RAISE {
            bindings = <
    &kp N1  &kp N2  &kp N3  &kp N4  &kp N5            &kp N6 &kp N7  &kp N8     &kp N9   &kp N0
-   &none  &none &mmv MOVE_UP &none &none                    &none &kp HOME  &kp UP &kp END   &kp PG_UP
+   &none  &mkp LCLK &mmv MOVE_UP &mkp RCLK &none                    &none &kp HOME  &kp UP &kp END   &kp PG_UP
    &none &mmv MOVE_LEFT &mmv MOVE_DOWN  &mmv MOVE_RIGHT &none                    &none &kp LEFT  &kp DOWN &kp RIGHT &kp PG_DN
         &mo ADVANCED  &mt SPACE LCTRL &kp LGUI                 &mt LALT RET  &mt BSPC LSHIFT   &kp X
                         >;
