@@ -98,19 +98,19 @@
         };
     };
 };
-/{
+/ {
     behaviors {
-       as: auto_shift {
+        as: auto_shift {
             compatible = "zmk,behavior-hold-tap";
             label = "AUTO_SHIFT";
             #binding-cells = <2>;
-            tapping_term_ms = <180>;
+            tapping_term_ms = <135>;
             quick_tap_ms = <0>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
-        };  
+        };
+    };
 };
-
 
 / {
    keymap {
