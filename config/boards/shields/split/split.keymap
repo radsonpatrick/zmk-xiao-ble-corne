@@ -118,10 +118,10 @@
 
         default_layer {
            bindings = <
-   &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &kp P
-   &kp A &kp S &kp D &kp F &kp G   &kp H &kp J  &kp K &kp L   &kp SEMI
-   &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH
-        &mo LOWER &mt  LCTRL SPACE &kp LGUI    &mt LALT RET  &mt  LSHIFT  BSPC  &mo RAISE
+   &kp AS(Q) &kp AS(W) &kp AS(E) &kp AS(R)       &kp AS(T)   &kp AS(Y) &kp AS(U)  &kp AS(I)     &kp AS(O)   &kp AS(P)
+   &kp AS(A) &kp AS(S) &kp AS(D) &kp AS(F)       &kp AS(G)   &kp AS(H) &kp AS(J)  &kp AS(K)     &kp AS(L)   &kp AS(SEMI)
+   &kp AS(Z) &kp AS(X) &kp AS(C) &kp AS(V)       &kp AS(B)   &kp AS(N) &kp AS(M)  &kp AS(COMMA) &kp AS(DOT) &kp AS(FSLH)
+                       &mo LOWER &mt LCTRL SPACE &kp LGUI    &mt LALT RET  &mt  LSHIFT  BSPC  &mo RAISE
                         >;
                 };
         RAISE {
