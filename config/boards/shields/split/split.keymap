@@ -118,9 +118,9 @@
 
         default_layer {
            bindings = <
-   &kp AS(Q) &kp AS(W) &kp AS(E) &kp AS(R)       &kp AS(T)   &kp AS(Y) &kp AS(U)  &kp AS(I)     &kp AS(O)   &kp AS(P)
-   &kp AS(A) &kp AS(S) &kp AS(D) &kp AS(F)       &kp AS(G)   &kp AS(H) &kp AS(J)  &kp AS(K)     &kp AS(L)   &kp AS(SEMI)
-   &kp AS(Z) &kp AS(X) &kp AS(C) &kp AS(V)       &kp AS(B)   &kp AS(N) &kp AS(M)  &kp AS(COMMA) &kp AS(DOT) &kp AS(FSLH)
+    AS(Q)  AS(W)  AS(E)  AS(R)        AS(T)    AS(Y)  AS(U)   AS(I)      AS(O)    AS(P)
+    AS(A)  AS(S)  AS(D)  AS(F)        AS(G)    AS(H)  AS(J)   AS(K)      AS(L)    AS(SEMI)
+    AS(Z)  AS(X)  AS(C)  AS(V)        AS(B)    AS(N)  AS(M)   AS(COMMA)  AS(DOT)  AS(FSLH)
                        &mo LOWER &mt LCTRL SPACE &kp LGUI    &mt LALT RET  &mt  LSHIFT  BSPC  &mo RAISE
                         >;
                 };
@@ -151,3 +151,4 @@
                
         };
 };
+web
