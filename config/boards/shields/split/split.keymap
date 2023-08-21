@@ -18,6 +18,7 @@
 #define LOWER 2
 #define ADVANCED 3
 
+#define AS(keycode) &as LS(keycode) keycode
 
 &mt {tapping-term-ms = <400>;};
 
