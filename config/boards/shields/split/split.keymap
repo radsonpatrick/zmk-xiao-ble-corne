@@ -29,7 +29,7 @@
 
 #define AS(keycode) &as LS(keycode) keycode
 
-&mt {tapping-term-ms = <400>;};
+&mt {tapping-term-ms = <200>;};
 
 &mmv {
     time-to-max-speed-ms = <400>;
