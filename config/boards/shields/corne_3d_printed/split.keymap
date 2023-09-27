@@ -109,11 +109,6 @@
             key-positions = <20 21 22>;
             bindings = <&kp LC(Y)>;
         };
-        combo_string {
-            timeout-ms = <30>;
-            key-positions = <20 21 22>;
-            bindings = <&teste>;
-        };
     };
 };
 / {
