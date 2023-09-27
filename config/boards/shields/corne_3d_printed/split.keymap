@@ -35,20 +35,20 @@
 &mwh {
     acceleration-exponent=<1>;
 };
-
-
-    / {
+/ {
     macros {
-         teste: teste {
-         compatible = "zmk,behavior-macro";
-         label = "teste";
-         #binding-cells = <0>;
-         wait-ms = <30>;
-         tap-ms = <40>;
-         bindings = <ls(S) &kp E &kp T &kp E &kp M &kp B &kp R &kp O &kp AT &kp 3 &kp 2 &kp 6 &kp 1 &kp 5 &kp 9 &kp 4 &kp 8 &kp 7>;
-            };
-         };
+        zed_em_kay: zed_em_kay {
+            label = "ZM_zed_em_kay";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press <ls(S) &kp E &kp T &kp E &kp M &kp B &kp R &kp O &kp AT &kp 3 &kp 2 &kp 6 &kp 1 &kp 5 &kp 9 &kp 4 &kp 8 &kp 7>;>
+                ;
+        };
+    };
 };
+
+
 
 / {
     combos {
