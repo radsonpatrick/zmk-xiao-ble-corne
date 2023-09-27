@@ -11,8 +11,6 @@
 #include <dt-bindings/zmk/mouse.h>
 
 
-#define COMBO_TIMEOUT 30
-
 #define U_MOUSE_MOVE_MAX 1400                     /* <--- New max speed setting (default: 600) */
 #undef MOVE_UP
 #undef MOVE_DOWN
@@ -29,7 +27,6 @@
 
 #define AS(keycode) &as LS(keycode) keycode
 
-&mt {tapping-term-ms = <200>;};
 
 &mmv {
     time-to-max-speed-ms = <400>;
@@ -39,9 +36,6 @@
     acceleration-exponent=<1>;
 };
 
-&kscan0 {
-	debounce-period = <30>;
-	};
 
 / {
     combos {
