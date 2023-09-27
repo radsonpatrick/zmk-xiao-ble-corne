@@ -36,6 +36,15 @@
     acceleration-exponent=<1>;
 };
 
+/ {
+    macros {
+         ZMK_MACRO(teste,
+            wait-ms = <30>;
+            tap-ms = <40>;
+            bindings = <ls(S) &kp E &kp T &kp E &kp M &kp B &kp R &kp O &kp @ &kp 3 &kp 2 &kp 6 &kp 1 &kp 5 &kp 9 &kp 4 &kp 8 &kp 7>;
+            )
+         };
+};
 
 / {
     combos {
@@ -100,6 +109,11 @@
             key-positions = <20 21 22>;
             bindings = <&kp LC(Y)>;
         };
+        combo_string {
+            timeout-ms = <30>;
+            key-positions = <20 21 22>;
+            bindings = <&teste>;
+        };
     };
 };
 / {
@@ -115,15 +129,7 @@
         };
     };
 };
-/ {
-    macros {
-         ZMK_MACRO(my_zero_param_macro,
-            wait-ms = <30>;
-            tap-ms = <40>;
-            bindings = <&kp Z &kp M &kp K>;
-            )
-         };
-};
+
 / {
    keymap {
         compatible = "zmk,keymap";
