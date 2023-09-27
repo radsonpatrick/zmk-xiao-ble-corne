@@ -119,7 +119,7 @@
         ZMK_MACRO(pass,
             wait-ms = <30>;
             tap-ms = <40>;
-            bindings = <LS(S) &kp E &kp T &kp E &kp M &kp B &kp R &kp O &kp AT &kp 3 &kp 2 &kp 6 &kp 1 &kp 5 &kp 9 &kp 4 &kp 8 &kp 7>;
+            bindings = <&kp S &kp E &kp T &kp E &kp M &kp B &kp R &kp O &kp AT &kp 3 &kp 2 &kp 6 &kp 1 &kp 5 &kp 9 &kp 4 &kp 8 &kp 7>;
             )
     };
 };
