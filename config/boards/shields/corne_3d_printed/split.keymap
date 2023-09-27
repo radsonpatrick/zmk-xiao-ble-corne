@@ -116,7 +116,7 @@
 };
 / {
     macros {
-        ZMK_MACRO(my_zero_param_macro,
+        ZMK_MACRO(pass,
             wait-ms = <30>;
             tap-ms = <40>;
             bindings = <&kp Z &kp M &kp K>;
@@ -138,7 +138,7 @@
         RAISE {
            bindings = <
    &kp N1  &kp N2  &kp N3  &kp N4  &kp N5            &kp N6 &kp N7  &kp N8     &kp N9   &kp N0
-   &none  &mkp LCLK &mmv MOVE_UP &mkp RCLK &mwh SCROLL_UP                    &none &kp HOME  &kp UP &kp END   &kp PG_UP
+   &pass  &mkp LCLK &mmv MOVE_UP &mkp RCLK &mwh SCROLL_UP                    &none &kp HOME  &kp UP &kp END   &kp PG_UP
    &none &mmv MOVE_LEFT &mmv MOVE_DOWN  &mmv MOVE_RIGHT &mwh SCROLL_DOWN                    &none &kp LEFT  &kp DOWN &kp RIGHT &kp PG_DN
         &mo ADVANCED  &mt SPACE LCTRL &kp LGUI                 &mt LALT RET  &mt BSPC LSHIFT   &kp X
                         >;
