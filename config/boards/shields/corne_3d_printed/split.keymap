@@ -117,18 +117,7 @@
         };
     };
 };
-/ {
-    macros {
-        ZMK_MACRO(pass,
-            wait-ms = <30>;
-            tap-ms = <40>;
-            bindings = <&macro_press &kp LSHFT>
-            ,<&macro_tap &kp S>
-            ,<&macro_release &kp LSHFT>
-            , <&macro_tap &kp E &kp T &kp E &kp M &kp B &kp R &kp O &kp AT &kp N3 &kp N2 &kp N6 &kp N1 &kp N5 &kp N9 &kp N4 &kp N8 &kp N7>;
-            )
-    };
-};
+
 / {
    keymap {
         compatible = "zmk,keymap";
@@ -144,7 +133,7 @@
         RAISE {
            bindings = <
    &kp N1  &kp N2  &kp N3  &kp N4  &kp N5            &kp N6 &kp N7  &kp N8     &kp N9   &kp N0
-   &pass  &mkp LCLK &mmv U_MS_U &mkp RCLK &msc U_WH_U                    &none &kp HOME  &kp UP &kp END   &kp PG_UP
+   &none  &mkp LCLK &mmv U_MS_U &mkp RCLK &msc U_WH_U                    &none &kp HOME  &kp UP &kp END   &kp PG_UP
    &none &mmv U_MS_L &mmv U_MS_D  &mmv U_MS_R &msc U_WH_D                    &none &kp LEFT  &kp DOWN &kp RIGHT &kp PG_DN
         &mo ADVANCED  &mt SPACE LCTRL &kp LGUI                 &mt LALT RET  &mt BSPC LSHIFT   &kp X
                         >;
