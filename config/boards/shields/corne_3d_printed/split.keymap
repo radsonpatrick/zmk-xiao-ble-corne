@@ -118,34 +118,14 @@
     };
 };
 
-/ {
-   keymap {
-        compatible = "zmk,keymap";
-
-        default_layer {
-           bindings = <
-    AS(Q)  AS(W)  AS(E)  AS(R)        AS(T)    AS(Y)  AS(U)   AS(I)      AS(O)    AS(P)
-    AS(A)  AS(S)  AS(D)  AS(F)        AS(G)    AS(H)  AS(J)   AS(K)      AS(L)    AS(SEMI)
-    AS(Z)  AS(X)  AS(C)  AS(V)        AS(B)    AS(N)  AS(M)   AS(COMMA)  AS(DOT)  AS(FSLH)
-                       &mo LOWER &mt LCTRL SPACE &kp LGUI    &mt LALT RET  &mt  LSHIFT  BSPC  &mt RAISE
-                        >;
-                };
-        LOWER {
-           bindings = <
-   &kp EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT   &kp CARET &kp AMPS  &kp ASTRK     &kp LPAR   &kp RPAR
-   &kp F1 &kp F2 &kp F3 &kp F4 &kp F5            &kp MINUS &kp EQUAL  &kp LBRC &kp RBRC   &kp BSLH
-   &kp F6 &kp F7 &kp F8 &kp F9 &kp F10           &kp UNDER &kp PLUS  &kp LBKT &kp RBKT &kp PIPE
-        &kp LGUI &mt SPACE LCTRL &kp LGUI        &kp RET  &mt BSPC LSHIFT   &mo ADVANCED
-                        >;
-                };
-        ADVANCED {
-           bindings = <
-   &none  &none  &none  &none  &none                           &none &none  &none    &none  &none
-   &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &bt BT_SEL 5        &bootloader &none  &none &none   &none
-   &bt BT_CLR &none  &none &bootloader &sys_reset                   &sys_reset &bootloader  &none &none &none
-               &kp LGUI    &mt SPACE LCTRL &kp LGUI                 &kp RET  &mt BSPC LSHIFT   &none
-                        >;
-                };
-               
-        };
-};
+ZMK_LAYER(base,
+//╭──────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮
+    X_LT     &kp Q         &kp W         &kp F         &kp P         &kp B           X_MT     &kp J         &kp L         &kp U         &kp Y         &kp SQT         X_RT
+//├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
+    X_LM     &hml LGUI A   &hml LALT R   &hml LCTRL S  &hml LSHFT T  &kp G           X_MM     &kp M         &hmr RSHFT N  &hmr LCTRL E  &hmr LALT I   &hmr LGUI O     X_RM
+//├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
+    X_LB     &kp Z         &kp X         &kp C         &kp D         &kp V           X_MB     &kp K         &kp H         &comma_morph  &dot_morph    &qexcl          X_RB
+//├──────┤ ╰─────────────┼─────────────┴─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┴───────────────────────────╯ ├──────┤
+    X_LH                                               &lt_spc NAV 0 &lt FN RET      X_MH     SMART_NUM     &smart_shft                                               X_RH
+//╰──────╯                                           ╰─────────────┴─────────────╯ ╰──────╯ ╰─────────────┴─────────────╯                                           ╰──────╯
+)
