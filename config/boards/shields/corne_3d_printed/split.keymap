@@ -32,12 +32,7 @@
   delay-ms = <0>;                   // 10
 };
 
-#define U_MS_U &mmv MOVE_UP
-#define U_MS_D &mmv MOVE_DOWN
-#define U_MS_L &mmv MOVE_LEFT
-#define U_MS_R &mmv MOVE_RIGHT
-#define U_WH_U &msc SCRL_UP
-#define U_WH_D &msc SCRL_DOWN
+
 
 / {
     combos {
@@ -133,8 +128,8 @@
         RAISE {
            bindings = <
    &kp N1 &kp N2 &kp N3 &kp N4 &kp N5   &kp N6 &kp N7  &kp N8     &kp N9   &kp N0
-   &none &kp F2 &kp F3 &kp F4 &kp F5            &none &kp HOME  &kp UP &kp END   &kp PG_UP
-   &none &kp F7 &kp F8 &kp F9 &kp F10           &none &kp LEFT  &kp DOWN &kp RIGHT &kp PG_DN
+   &none &kp F2 &mmv MOVE_UP &kp F4 &msc SCRL_UP            &none &kp HOME  &kp UP &kp END   &kp PG_UP
+   &none &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_RIGHT &msc SCRL_DOWN          &none &kp LEFT  &kp DOWN &kp RIGHT &kp PG_DN
         &kp LGUI &mt SPACE LCTRL &kp LGUI        &kp RET  &mt BSPC LSHIFT   &mo ADVANCED
                         >;
                 };
