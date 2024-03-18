@@ -32,12 +32,7 @@
   delay-ms = <0>;                   // 10
 };
 
-#define U_MS_U &mmv MOVE_UP
-#define U_MS_D &mmv MOVE_DOWN
-#define U_MS_L &mmv MOVE_LEFT
-#define U_MS_R &mmv MOVE_RIGHT
-#define U_WH_U &msc SCRL_UP
-#define U_WH_D &msc SCRL_DOWN
+
 
 / {
     combos {
@@ -117,18 +112,7 @@
         };
     };
 };
-/ {
-    macros {
-        ZMK_MACRO(pass,
-            wait-ms = <30>;
-            tap-ms = <40>;
-            bindings = <&macro_press &kp LSHFT>
-            ,<&macro_tap &kp S>
-            ,<&macro_release &kp LSHFT>
-            , <&macro_tap &kp E &kp T &kp E &kp M &kp B &kp R &kp O &kp AT &kp N3 &kp N2 &kp N6 &kp N1 &kp N5 &kp N9 &kp N4 &kp N8 &kp N7>;
-            )
-    };
-};
+
 / {
    keymap {
         compatible = "zmk,keymap";
@@ -138,15 +122,15 @@
     AS(Q)  AS(W)  AS(E)  AS(R)        AS(T)    AS(Y)  AS(U)   AS(I)      AS(O)    AS(P)
     AS(A)  AS(S)  AS(D)  AS(F)        AS(G)    AS(H)  AS(J)   AS(K)      AS(L)    AS(SEMI)
     AS(Z)  AS(X)  AS(C)  AS(V)        AS(B)    AS(N)  AS(M)   AS(COMMA)  AS(DOT)  AS(FSLH)
-                       &mo LOWER &mt LCTRL SPACE &kp LGUI    &mt LALT RET  &mt  LSHIFT  BSPC  &mo RAISE
+                       &mo RAISE &mt LCTRL SPACE &kp LGUI    &mt LALT RET  &mt  LSHIFT  BSPC  &mo LOWER
                         >;
                 };
         RAISE {
            bindings = <
-   &kp N1  &kp N2  &kp N3  &kp N4  &kp N5            &kp N6 &kp N7  &kp N8     &kp N9   &kp N0
-   &pass  &mkp LCLK &mmv U_MS_U &mkp RCLK &msc U_WH_U                    &none &kp HOME  &kp UP &kp END   &kp PG_UP
-   &none &mmv U_MS_L &mmv U_MS_D  &mmv U_MS_R &msc U_WH_D                    &none &kp LEFT  &kp DOWN &kp RIGHT &kp PG_DN
-        &mo ADVANCED  &mt SPACE LCTRL &kp LGUI                 &mt LALT RET  &mt BSPC LSHIFT   &kp X
+   &kp N1 &kp N2 &kp N3 &kp N4 &kp N5   &kp N6 &kp N7  &kp N8     &kp N9   &kp N0
+   &none &mkp LCLK &mmv MOVE_UP &mkp RCLK &msc SCRL_UP            &none &kp HOME  &kp UP &kp END   &kp PG_UP
+   &none &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_RIGHT &msc SCRL_DOWN          &none &kp LEFT  &kp DOWN &kp RIGHT &kp PG_DN
+        &kp LGUI &mt SPACE LCTRL &kp LGUI        &kp RET  &mt BSPC LSHIFT   &mo ADVANCED
                         >;
                 };
         LOWER {
