@@ -2,7 +2,7 @@
 if SHIELD_SPLIT_LEFT
 
 config ZMK_KEYBOARD_NAME
-	default "corne_3d_printed"
+	default "corner_3d_printed"
 
 config ZMK_SPLIT_BLE_ROLE_CENTRAL
 	default y
