@@ -37,6 +37,8 @@
             label = "TP";
             #binding-cells = <0>;
             bindings = <&kp LGUI>, <&kp LEFT_CONTROL>;
+
+            tapping-term-ms = <300>;
         };
     };
 
