@@ -99,7 +99,7 @@
 
         crtls {
             bindings = <&kt LEFT_CONTROL>;
-            key-positions = <34 33>;
+            key-positions = <31 32>;
         };
     };
 
